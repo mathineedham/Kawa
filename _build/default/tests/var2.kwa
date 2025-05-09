@@ -1,0 +1,14 @@
+var int x;
+var bool b;
+
+main { 
+  var int y;
+  y = 5;
+  x = 0;
+  b = x != y;
+  while ( b ) {
+    print( x );
+    x = x + 1; 
+    b = x != y;
+  }
+}

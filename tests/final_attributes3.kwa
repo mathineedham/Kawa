@@ -1,0 +1,37 @@
+var paire p1;
+var triple t1;
+
+class paire {
+  attribute final int x;
+  attribute int y;
+
+  method void constructor(int a, int b) {
+    this.x = a;
+    this.y = b;
+  }
+
+}
+
+class triple extends paire{
+  attribute int z ;
+
+  // les deux versions du constructor de triple marche 
+  // un classe fille peut changer les attribut finaux herite de ses parents dans sin constructeur
+  
+  method void constructor1(int x, int y, int z) {
+    super.constructor(x,y);
+    this.z = z;
+  }
+
+  method void constructor(int x, int y, int z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+
+}
+
+main {
+  p1 = new paire(3,4);
+  t1 = new triple(3,4,5);
+}

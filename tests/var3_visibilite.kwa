@@ -1,0 +1,18 @@
+var bool c;
+ 
+main {
+  c= true;
+  if(c){
+    print(1);
+    var int c; // var locale qui cache la var globale c
+    c = 10;
+    print(c);
+    var int d;
+    d = 15;
+    print(d);
+    // affiche 1 puis 10 puis 15
+  }else{
+    print(0);
+  }
+  // print(d); // donne une erreur si on decommente cette line
+}

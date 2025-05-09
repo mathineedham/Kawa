@@ -1,0 +1,52 @@
+
+var paire p;
+var triple t;
+
+class paire {
+  attribute int x;
+  attribute int y;
+
+  method void constructor(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  method int somme() {
+    return this.x + this.y;
+  }
+
+  // uncomment for error, typechecker looks at all methods whether or not they are called upon
+  // method int error() {
+  //  return super.somme();
+  // }
+}
+
+class triple extends paire {
+  attribute int z;
+
+  method void constructor(int x, int y, int z) {
+    super.constructor(x,y);
+    this.z = z;
+  }
+
+  method int somme() {
+    return this.x + this.y + this.z;
+  }
+
+  method int somme_paire(){
+     this.x=super;  returns a type error
+    return super.somme();
+  }
+
+  method int produit() {
+    return this.x * this.y * this.z;
+  }
+}
+
+main {
+  p = new paire(1, 2);
+  t = new triple(1, 2,3);
+  print(t.somme());
+  print(t.somme_paire());
+  // prints 6 then 5
+}

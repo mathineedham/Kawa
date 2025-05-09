@@ -1,0 +1,85 @@
+type token =
+    WHILE
+  | VOID
+  | VAR
+  | THIS
+  | SUPER
+  | SUPEQ
+  | SUP
+  | SET
+  | SEMI
+  | RPAR
+  | RETURN
+  | PRINT
+  | PLUS
+  | OU
+  | NOT
+  | NEW
+  | NEQU
+  | MOINS
+  | MOD
+  | METHOD
+  | MAIN
+  | LPAR
+  | INTCONST of int
+  | INT
+  | INSTANCEOF
+  | INFEQ
+  | INF
+  | IF
+  | IDENT of string
+  | FOIS
+  | FINAL
+  | EXTENDS
+  | ET
+  | EQU
+  | EOF
+  | END
+  | ELSE
+  | DOT
+  | DIVI
+  | COMA
+  | CLASS
+  | BOOLCONST of bool
+  | BOOL
+  | BEGIN
+  | ATTRIBUTE
+val menhir_begin_marker : int
+val xv_vars : ((string * Kawa.typ) * Kawa.expr option) list
+val xv_unop : Kawa.unop
+val xv_typ : Kawa.typ
+val xv_separated_nonempty_list_COMA_parametres_ : (string * Kawa.typ) list
+val xv_separated_nonempty_list_COMA_expression_ : Kawa.expr list
+val xv_separated_nonempty_list_COMA_IDENT_ : string list
+val xv_separated_list_COMA_parametres_ : (string * Kawa.typ) list
+val xv_separated_list_COMA_expression_ : Kawa.expr list
+val xv_program : Kawa.program
+val xv_preceded_EXTENDS_IDENT_ : string
+val xv_parametres : string * Kawa.typ
+val xv_option_preceded_EXTENDS_IDENT__ : string option
+val xv_option_FINAL_ : unit option
+val xv_methods_definition : Kawa.method_def
+val xv_memory_acess : Kawa.mem_access
+val xv_loption_separated_nonempty_list_COMA_parametres__ :
+  (string * Kawa.typ) list
+val xv_loption_separated_nonempty_list_COMA_expression__ : Kawa.expr list
+val xv_list_methods_definition_ : Kawa.method_def list
+val xv_list_instruction_ : Kawa.instr list list
+val xv_list_delimited_VAR_vars_SEMI__ :
+  ((string * Kawa.typ) * Kawa.expr option) list list
+val xv_list_delimited_ATTRIBUTE_attributes_SEMI__ :
+  ((string * Kawa.typ) * bool) list list
+val xv_list_class_definition_ : Kawa.class_def list
+val xv_instructions : Kawa.seq
+val xv_instruction : Kawa.instr list
+val xv_expression : Kawa.expr
+val xv_delimited_VAR_vars_SEMI_ :
+  ((string * Kawa.typ) * Kawa.expr option) list
+val xv_delimited_ATTRIBUTE_attributes_SEMI_ :
+  ((string * Kawa.typ) * bool) list
+val xv_declarations_lines : ((string * Kawa.typ) * Kawa.instr) list
+val xv_class_definition : Kawa.class_def
+val xv_binop : Kawa.binop
+val xv_attributes_lines : ((string * Kawa.typ) * bool) list
+val xv_attributes : ((string * Kawa.typ) * bool) list
+val menhir_end_marker : int

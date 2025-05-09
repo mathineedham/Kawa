@@ -1,0 +1,28 @@
+var point a;
+var point b;
+
+class point {
+  attribute int x;
+  attribute int y;
+
+  method void echange(){
+    var int c;
+    c = this.x;
+    this.x = this.y;
+    this.y = c; 
+    // return c; // renvoie une erreur si on decommente
+  }
+}
+
+main {
+  a = new point;
+  b = new point;
+  a.x = 1;
+  a.y = 2;
+  b.x = 3;
+  b.y = 4;
+  print(a.x + b.x);
+  a.echange();
+  print(a.x + b.x);
+
+}

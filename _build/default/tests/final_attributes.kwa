@@ -1,0 +1,49 @@
+
+var paire p;
+var triple t;
+
+class paire {
+  attribute final int x;
+  attribute int y;
+
+  method void constructor(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  method int somme() {
+    return this.x + this.y;
+  }
+}
+
+class triple extends paire {
+  attribute int z;
+
+  method void constructor(int x, int y, int z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+
+  method int somme() {
+    return this.x + this.y + this.z;
+  }
+
+  method int produit() {
+    return this.x * this.y * this.z;
+  }
+
+  method void changeX( int v ){ // va renvoyer un erreur si il est appeler
+    this.x = v;
+  }
+}
+
+main {
+  p = new paire(1, 2);
+  t = new triple(3, 4, 5);
+  // p.x = 0; // erreur
+  // t.x = 0; // erreur
+  // t.changeX(6); // erreur
+  p.y = 0;
+  t.z = 0;
+}

@@ -1,0 +1,38 @@
+var point point1;
+var point point2;
+var line l;
+
+class point {
+  attribute int x;
+  attribute int y;
+
+  method void constructor(int a, int b) {
+    this.x = a;
+    this.y = b;
+  }
+
+  method int somme() {
+    return this.x + this.y;
+  }
+}
+
+class line {
+  attribute point p1;
+  attribute point p2;
+
+  method point distance() {
+    return new point(this.p1.x - this.p2.x, this.p1.y - this.p2.y);
+  }
+}
+
+main {
+  point1 = new point(7, 1);
+  point2 = new point(2, 3);
+  l = new line;
+  l.p1= point1;
+  l.p2 = point2;
+  var point p3;
+  p3 = l.distance();
+  print(p3.somme());
+  // affiche 3
+}

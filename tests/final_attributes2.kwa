@@ -1,0 +1,42 @@
+
+
+class val {
+  attribute final int x;
+
+  method void constructor(int x) {
+    this.x = x;
+  }
+
+  method int value() {
+    return this.x;
+  }
+}
+
+class point{
+  attribute val v ;
+  attribute final bool is_red ;
+
+  method void constructor(int a, bool b) {
+    this.is_red = b;
+    // error : cant change attribute x of class val outside of the constructor of that class
+    // var val value = new val; 
+    // value.x=a;
+    this.v = new val(a);
+    // this.v.x = 0;
+  }
+
+  method int value() {
+    if(this.is_red){
+      return this.v.value();
+    }else
+    {
+      return 0;
+    }
+  }
+}
+
+main {
+  var point p;
+  p = new point(6,true);
+  print(p.value());
+}

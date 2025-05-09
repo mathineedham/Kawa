@@ -1,0 +1,30 @@
+var point a, b;
+var bool c;
+
+class point {
+  attribute int x, y;
+
+}
+
+main {
+  c= true;
+  a = new point;
+  b = new point;
+  a.x = 1;
+  a.y = 2;
+  b.x = 3;
+  b.y = 4;
+  if(c){
+    print(a.x + a.y + b.x + b.y);
+    var int a;
+    a = b.y;
+    print(a+b.x+b.y);
+    // affiche 10 puis 11
+    var int d;
+    d = 15;
+    print(d);
+  }else{
+    print(0);
+  }
+  // print(d); // donne une erreur si on decommente cette line
+}

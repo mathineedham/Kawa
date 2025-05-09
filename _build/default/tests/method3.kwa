@@ -1,0 +1,33 @@
+var point a;
+var point b;
+
+class point {
+  attribute int x;
+  attribute int y;
+
+  method int somme(bool b){
+    if(b){
+      return this.x + this.y ;
+    }
+    else {
+      return 0;
+    }
+  }
+}
+
+main {
+  a = new point;
+  b = new point;
+  a.x = 1;
+  a.y = 2;
+  b.x = 3;
+  b.y = 4;
+  var bool t ;
+  print(a.somme(true));
+  t = false;
+  print(b.somme(t));
+  print(b.somme(t||true));
+
+
+
+}
